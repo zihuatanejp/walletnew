@@ -1,15 +1,17 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import './app/utils/global';
+import './shim';
+import crypto from 'crypto';
+import { Provider } from 'react-redux';
+import store from './app/store/index';
+import React from 'react';
+import { Component } from 'react';
 
-import React, { Component } from 'react';
+import { I18n } from './app/language/i18n'; // 多国语言支持
+import { createStackNavigator, createBottomTabNavigator, StackNavigator } from 'react-navigation';
+
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
+  Platform, View,
+  StyleSheet, Text, AsyncStorage
 } from 'react-native';
 
 const instructions = Platform.select({
