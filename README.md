@@ -9,7 +9,7 @@ true chain light wallet: it is a react-native project
 先配置好环境（已有环境可跳过），  
 参考这里: [搭建rn开发环境](https://reactnative.cn/docs/getting-started.html)
 
-```go
+```
 > cd walletnew //进入项目测试
 运行起来：
 	在ios上运行app:
