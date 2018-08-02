@@ -10,7 +10,30 @@ true chain light wallet: it is a react-native project
 参考这里: [搭建rn开发环境](https://reactnative.cn/docs/getting-started.html)
 
 ```
+下载安装项目:
+> git clone https://github.com/zihuatanejp/walletnew.git
+
 > cd walletnew //进入项目测试
+
+> npm install //安装项目依赖包
+
+//需要对react-native-crypto包特别对待：
+//先卸载
+> npm uninstall --save-dev tradle/rn-nodeify
+> npm uninstall --save tradle/rn-nodeify
+> react-native unlink react-native-randombytes
+> npm uninstall react-native-randombytes
+> npm uninstall react-native-crypto
+
+//重装:
+> npm install --save react-native-crypto
+> npm install --save react-native-randombytes
+> react-native link react-native-randombytes
+> npm install --save-dev tradle/rn-nodeify
+> npm install --save tradle/rn-nodeify
+//打开powershell(如果是windows用户，然后进入项目目录)
+> ./node_modules/.bin/rn-nodeify --hack --install //重写覆盖已有的包内容
+
 运行起来：
 	在ios上运行app:
 		1.
